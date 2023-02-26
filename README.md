@@ -1,4 +1,4 @@
-# Projeto base
+# Projeto base.
 
 Projeto base com Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
 
