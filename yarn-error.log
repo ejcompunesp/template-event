@@ -1,0 +1,84 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\ProgramData\UNIVALI\Portugol Studio;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\SARA\AppData\Local\Microsoft\WindowsApps;C:\Users\SARA\AppData\Local\Yarn\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\heroku\bin;C:\Users\SARA\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\tools\dart-sdk\bin;C:\Users\SARA\AppData\Roaming\Pub\Cache\bin;C:\Users\SARA\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  18.9.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.54.1.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141376:19)
+      at Object.onceWrapper (node:events:627:28)
+      at ClientRequest.emit (node:events:513:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:838:9)
+      at Object.onceWrapper (node:events:627:28)
+      at TLSSocket.emit (node:events:525:35)
+      at Socket._onTimeout (node:net:562:8)
+      at listOnTimeout (node:internal/timers:564:17)
+      at process.processTimers (node:internal/timers:507:7)
+
+npm manifest: 
+  {
+    "name": "template-event",
+    "description": "This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "serve": "vite preview",
+      "test": "vitest",
+      "test:ui": "vitest --ui",
+      "lint": "eslint src --max-warnings=0",
+      "typecheck": "tsc --project tsconfig.json --noEmit"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.20.12",
+      "@babel/preset-env": "^7.20.2",
+      "@babel/preset-react": "^7.18.6",
+      "@babel/preset-typescript": "^7.18.6",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@types/node": "^18.11.18",
+      "@types/react": "^18.0.27",
+      "@types/react-dom": "^18.0.10",
+      "@types/testing-library__jest-dom": "^5.14.5",
+      "@typescript-eslint/eslint-plugin": "^5.49.0",
+      "@typescript-eslint/parser": "^5.49.0",
+      "@vitejs/plugin-react": "^3.0.1",
+      "@vitest/ui": "^0.28.4",
+      "autoprefixer": "^10.4.13",
+      "eslint": "^8.32.0",
+      "eslint-config-prettier": "^8.6.0",
+      "eslint-plugin-prettier": "^4.2.1",
+      "eslint-plugin-react": "^7.32.1",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "eslint-plugin-tailwindcss": "^3.8.2",
+      "happy-dom": "^8.2.4",
+      "postcss": "^8.4.21",
+      "prettier": "2.8.3",
+      "tailwindcss": "^3.2.4",
+      "typescript": "^4.9.4",
+      "vite": "^4.0.4",
+      "vite-tsconfig-paths": "^4.0.5",
+      "vitest": "^0.28.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
