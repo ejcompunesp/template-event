@@ -1,11 +1,35 @@
 import Avatar from 'components/Avatar'
 import Card from 'components/Card'
+import Facebook from '../utils/icons/facebook.svg'
+import Instagram from '../utils/icons/instagram.svg'
+import Spotify from '../utils/icons/spotify.svg'
+import Youtube from '../utils/icons/youtube.svg'
+import Arrow from '../utils/icons/arrow-bottom.svg'
 
 
 const Root = () => {
     return (
         <>
             <div className="bg-red-100 min-h-screen items-center justify-center h-screen flex">
+                <div className='fixed left-0 flex flex-col space-y-64' >
+                    <div className=' pt-32'>
+                        <a href="https://www.facebook.com">
+                            <img className='w-6 h-6 mx-3 my-4' src={Facebook} alt="" />
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <img className='w-6 h-6 mx-3 my-4' src={Instagram} alt="" />
+                        </a>
+                        <a href="https://open.spotify.com">
+                            <img className='w-6 h-6 mx-3 my-4' src={Spotify} alt="" />
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <img className='w-6 h-6 mx-3 my-4' src={Youtube} alt="" />
+                        </a>
+                    </div>
+                    <a href="/">
+                        <img className='w-6 h-6 mx-3 my-4' src={Arrow} alt="" />
+                    </a>
+                </div>
                 <div className="p-6 max-w-sm mx-auto bg-violet-100 rounded-xl shadow-lg flex-row items-center space-x-4">
                     <div>
                         <Avatar />
