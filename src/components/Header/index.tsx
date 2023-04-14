@@ -72,17 +72,18 @@ const CloseIcon = () => {
   );
 };
 
-const Navbar = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", updateHeader);
-  });
-
+const Header = () => {
+  
   const { isOpen, getDisclosureProps, getButtonProps } = useDisclosure();
   const buttonProps = getButtonProps();
   const disclosureProps = getDisclosureProps();
-
-  const [imgHeight, setImgHeight] = useState("5rem");
-  const [headerOpacity, setHeaderOpacity] = useState("#0000");
+  
+  const [ imgHeight, setImgHeight ] = useState("5rem");
+  const [ headerOpacity, setHeaderOpacity ] = useState("#0000");
+  
+  useEffect(() => {
+    window.addEventListener("scroll", updateHeader);
+  }, [ imgHeight, headerOpacity ]);
 
   const updateHeader = () => {
     if (window.scrollY > 0) {
@@ -95,44 +96,41 @@ const Navbar = () => {
   };
 
   return (
-    <Box sx={boxStyle} bg={headerOpacity}>
-      <LinkBox zIndex={999}>
-      <LinkOverlay href="">
-        <Image
-          src={Logo}
-          height={{ base: "2.5rem", md: imgHeight }}
-          transition="all 0.5s"
-        />
-      </LinkOverlay>
+    <Box sx={ boxStyle } bg={ headerOpacity }>
+      <LinkBox zIndex={1}>
+        <LinkOverlay href="">
+          <Image
+            src={ Logo }
+            height={{ base: "2.5rem", md: imgHeight }}
+            transition="all 0.5s"
+          />
+        </LinkOverlay>
       </LinkBox>
-
       <HStack marginLeft="auto" hideBelow="sm" spacing="2rem">
-        <Link sx={LinkStyle} href="">
+        <Link sx={ LinkStyle } href="">
           OFFstory
         </Link>
-        <Link sx={LinkStyle} href="">
+        <Link sx={ LinkStyle } href="">
           Line-up
         </Link>
-        <Link sx={LinkStyle} href="">
+        <Link sx={ LinkStyle } href="">
           FAQ
         </Link>
       </HStack>
-
       <Box ml="auto" hideFrom="sm" gap="0.2rem">
         <Button
-          rightIcon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          rightIcon={ isOpen ? <CloseIcon /> : <HamburgerIcon /> }
           variant="unstyled"
           display="inline-flex"
           px="0"
-          zIndex={999}
-          {...buttonProps}
+          zIndex={1}
+          { ...buttonProps }
         > 
           Menu
         </Button>
       </Box>
-
-      <Fade in={isOpen} unmountOnExit={true}>
-        <Box sx={MenuStyle} {...disclosureProps}>
+      <Fade in={ isOpen } unmountOnExit={ true }>
+        <Box sx={ MenuStyle } { ...disclosureProps }>
           <VStack alignItems="left" spacing={0}>
             <Link sx={{ ...LinkStyle, ...MenuLinkStyle }} href="">OFFstory</Link>
             <Link sx={{ ...LinkStyle, ...MenuLinkStyle }} href="">Line-up</Link>
@@ -144,4 +142,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
