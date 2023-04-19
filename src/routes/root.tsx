@@ -4,11 +4,12 @@ import Spotify from "../assets/icons/spotify.svg";
 import Youtube from "../assets/icons/youtube.svg";
 import Arrow from "../assets/icons/arrow-bottom.svg";
 
-import { Avatar, Card } from "components";
+import { Avatar, Card, Header } from "components";
 
 const Root = () => {
   return (
     <>
+    <Header/>
       <div className="bg-red-100 min-h-screen items-center justify-center h-screen flex">
         <div className="fixed left-0 flex flex-col space-y-64">
           <div className=" pt-32">
