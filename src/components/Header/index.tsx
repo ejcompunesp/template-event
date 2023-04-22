@@ -18,6 +18,7 @@ import Logo from "../../assets/images/logo-off-2.png";
 const boxStyle = {
   w: "100%",
   p: "0.6rem 3rem 0.6rem 1.5rem",
+  pr: {base:"1.5rem", sm:"3rem"},
   color: "white",
   display: "flex",
   alignItems: "center",
@@ -96,7 +97,7 @@ const Header = () => {
   };
 
   return (
-    <Box sx={ boxStyle } bg={ headerOpacity }>
+    <Box sx={ boxStyle } bg={ headerOpacity } zIndex={1}>
       <LinkBox zIndex={1}>
         <LinkOverlay href="">
           <Image
