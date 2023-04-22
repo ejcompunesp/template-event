@@ -75,8 +75,7 @@ const CloseIcon = () => {
 
 const Header = () => {
   
-  const { isOpen, getDisclosureProps, getButtonProps } = useDisclosure();
-  const buttonProps = getButtonProps();
+  const { onToggle, isOpen, getDisclosureProps } = useDisclosure();
   const disclosureProps = getDisclosureProps();
   
   const [ imgHeight, setImgHeight ] = useState("5rem");
@@ -95,6 +94,12 @@ const Header = () => {
       setImgHeight("5rem");
     }
   };
+
+  const toggleScroll = () => {
+    console.log("Oi")
+    let doc = document.body.style.overflow = isOpen ? "visible" : "hidden";
+    onToggle()
+  }
 
   return (
     <Box sx={ boxStyle } bg={ headerOpacity } zIndex={1}>
@@ -125,7 +130,7 @@ const Header = () => {
           display="inline-flex"
           px="0"
           zIndex={1}
-          { ...buttonProps }
+          onClick={toggleScroll}
         > 
           Menu
         </Button>
