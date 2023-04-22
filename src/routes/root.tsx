@@ -3,8 +3,9 @@ import Instagram from "../assets/icons/instagram.svg";
 import Spotify from "../assets/icons/spotify.svg";
 import Youtube from "../assets/icons/youtube.svg";
 import Arrow from "../assets/icons/arrow-bottom.svg";
+import { Box } from "@chakra-ui/react";
 
-import { Avatar, Card, Header } from "components";
+import { Avatar, Card, Footer, Header } from "components";
 
 const Root = () => {
   return (
@@ -47,6 +48,9 @@ const Root = () => {
           </div>
         </div>
       </div>
+      <Box mx={{base:"0", sm:"2rem", md:"5rem", xl:"auto"}} fontWeight="bold" maxW={{xl:"6xl"}} p="1rem">
+       <Footer/>
+      </Box>
     </>
   );
 };
