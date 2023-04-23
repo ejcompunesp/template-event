@@ -5,7 +5,7 @@ import Youtube from "../assets/icons/youtube.svg";
 import Arrow from "../assets/icons/arrow-bottom.svg";
 import { Box } from "@chakra-ui/react";
 
-import { Avatar, Card, Header, Newsroom } from "components";
+import { Avatar, Card, Footer, Header } from "components";
 
 const Root = () => {
   return (
@@ -49,7 +49,7 @@ const Root = () => {
         </div>
       </div>
       <Box mx={{base:"0", sm:"2rem", md:"5rem", xl:"auto"}} fontWeight="bold" maxW={{xl:"6xl"}} p="1rem">
-       <Newsroom/> 
+       <Footer/>
       </Box>
     </>
   );
