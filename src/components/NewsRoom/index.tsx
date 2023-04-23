@@ -20,7 +20,7 @@ const NewsRoom = () => {
     <Box>
       <Text fontSize="7xl">NEWSROOM</Text>
       {mockArray.map((object) => (
-        <Flex direction="row" my="6">
+        <Flex direction="row" my="6" alignItems="center">
           <Image
             h="150"
             w="50%"
