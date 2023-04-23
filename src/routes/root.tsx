@@ -3,14 +3,13 @@ import Instagram from "../assets/icons/instagram.svg";
 import Spotify from "../assets/icons/spotify.svg";
 import Youtube from "../assets/icons/youtube.svg";
 import Arrow from "../assets/icons/arrow-bottom.svg";
-import { Box } from "@chakra-ui/react";
-
+import { AspectRatio, Box } from "@chakra-ui/react";
 import { Avatar, Card, Footer, Header } from "components";
 
 const Root = () => {
   return (
     <>
-    <Header/>
+      <Header />
       <div className="bg-red-100 min-h-screen items-center justify-center h-screen flex">
         <div className="fixed left-0 flex flex-col space-y-64">
           <div className=" pt-32">
@@ -48,8 +47,22 @@ const Root = () => {
           </div>
         </div>
       </div>
-      <Box mx={{base:"0", sm:"2rem", md:"5rem", xl:"auto"}} fontWeight="bold" maxW={{xl:"6xl"}} p="1rem">
-       <Footer/>
+      <Box
+        mx={{ base: "0", sm: "2rem", md: "5rem", xl: "auto" }}
+        fontWeight="bold"
+        maxW={{ xl: "6xl" }}
+        p="1rem"
+      >
+        <AspectRatio maxWidth="100%" ratio={16 / 9}>
+          <iframe
+            width="100%"
+            src={
+              "https://www.youtube.com/embed/DF7zLGp0uK4?mute=1&loop=1&autoplay=1&loop=1&showinfo=0&modestbranding=1&rel=0"
+            }
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          />
+        </AspectRatio>
+        <Footer />
       </Box>
     </>
   );
