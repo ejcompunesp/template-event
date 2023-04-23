@@ -18,6 +18,7 @@ import Logo from "../../assets/images/logo-off-2.png";
 const boxStyle = {
   w: "100%",
   p: "0.6rem 3rem 0.6rem 1.5rem",
+  pr: {base:"1.5rem", sm:"3rem"},
   color: "white",
   display: "flex",
   alignItems: "center",
@@ -74,8 +75,7 @@ const CloseIcon = () => {
 
 const Header = () => {
   
-  const { isOpen, getDisclosureProps, getButtonProps } = useDisclosure();
-  const buttonProps = getButtonProps();
+  const { onToggle, isOpen, getDisclosureProps } = useDisclosure();
   const disclosureProps = getDisclosureProps();
   
   const [ imgHeight, setImgHeight ] = useState("5rem");
@@ -95,8 +95,14 @@ const Header = () => {
     }
   };
 
+  const toggleScroll = () => {
+    console.log("Oi")
+    let doc = document.body.style.overflow = isOpen ? "visible" : "hidden";
+    onToggle()
+  }
+
   return (
-    <Box sx={ boxStyle } bg={ headerOpacity }>
+    <Box sx={ boxStyle } bg={ headerOpacity } zIndex={1}>
       <LinkBox zIndex={1}>
         <LinkOverlay href="">
           <Image
@@ -124,7 +130,7 @@ const Header = () => {
           display="inline-flex"
           px="0"
           zIndex={1}
-          { ...buttonProps }
+          onClick={toggleScroll}
         > 
           Menu
         </Button>
