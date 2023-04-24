@@ -15,7 +15,7 @@ function App() {
   return (
     <React.StrictMode>
       <ChakraProvider>
-        <RouterProvider router={router} />
+        <Root />
       </ChakraProvider>
     </React.StrictMode>
   );
