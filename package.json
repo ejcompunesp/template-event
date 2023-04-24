@@ -5,8 +5,8 @@
   "homepage": "https://EJComp-Unesp.github.io/template-event",
   "private": true,
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
