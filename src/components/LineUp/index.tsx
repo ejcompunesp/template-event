@@ -18,9 +18,9 @@ const songs = [
 const LineUp = () => {
   return (
     <Box>
-      <Text fontSize="7xl">LINE-UP</Text>
-      {songs.map((element) => (
-        <Badge p="4" m="4" variant="outline">
+      <Text fontSize="3rem" mb="32px" >LINE-UP</Text>
+      {songs.map((element, index) => (
+        <Badge key={index} p="4" m="4" variant="outline">
           <Text as="b">{element}</Text>
         </Badge>
       ))}
