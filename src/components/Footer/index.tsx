@@ -61,7 +61,7 @@ const Footer = () => {
         </Link>
       </Flex>
       <Divider sx={ dividerStyle } my="1rem" opacity="0.8" />
-      <Flex justify="space-between" flexDir={{ base: "column", md: "row" }} rowGap="1rem">
+      <Flex justify="space-between" flexDir={{ base: "column", md: "row"}} rowGap="1rem">
         <Text fontSize="xs">
           Copyright 2023 EJComp
         </Text>

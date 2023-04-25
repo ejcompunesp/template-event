@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import BackgroundImage from "../../assets/images/background-image.webp";
 
 type Mock = {
@@ -18,21 +18,24 @@ const mockArray = Array.from({ length: 3 }, () => mock);
 const NewsRoom = () => {
   return (
     <Box>
-      <Text fontSize="7xl">NEWSROOM</Text>
-      {mockArray.map((object) => (
-        <Flex direction="row" my="6" alignItems="center">
-          <Image
-            h="150"
-            w="50%"
-            fit="cover"
-            src={object.image}
-            borderRadius="lg"
-          />
-          <Flex direction="column" ml="6">
-            <Text fontSize="lg">{object.date}</Text>
-            <Text fontSize="3xl">{object.title}</Text>
-          </Flex>
-        </Flex>
+      <Text fontSize="3rem" mb="32px" >NEWSROOM</Text>
+      {mockArray.map((object, index) => (
+        <Wrap key={index} mb="32px">
+          <WrapItem w="40%">
+            <Image
+              mr="16px"
+              h="150"
+              w="100%"
+              fit="cover"
+              src={object.image}
+              borderRadius="lg"
+            />
+          </WrapItem>
+            <Flex direction="column" ml="6">
+              <Text fontSize="1rem">{object.date}</Text>
+              <Text fontSize="1.5rem">{object.title}</Text>
+            </Flex>
+        </Wrap>
       ))}
     </Box>
   );
